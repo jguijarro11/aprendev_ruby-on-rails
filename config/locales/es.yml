@@ -1,0 +1,63 @@
+es:
+  app_name: 'Vendelo'
+  activerecord:
+    models:
+      product: Producto
+    attributes:
+      product:
+        title: 'Título'
+        description: 'Descripción'
+        price: 'Precio'
+        photo: 'Foto'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: 'no puede estar vacío'
+            description:
+              blank: 'no puede estar vacío'
+            price:
+              blank: 'no puede estar vacío'
+  common:
+    confirm: '¿Estás seguro?'
+  shared:
+    header:
+      add: 'Añadir producto'
+      categories: 'Categorias'
+  products:
+    edit:
+      title: 'Editar producto'
+    new:
+      title: 'Añadir producto'
+    index:
+      title: 'Productos'
+      all: 'Todos'
+      min_price: 'Precio mínimo'
+      max_price: 'Precio máximo'
+    show:
+      edit: 'Editar producto'
+      delete: 'Eliminar producto'
+    create:
+      created: 'Producto creado correctamente'
+    update:
+      updated: 'Producto actualizado correctamente'
+    destroy:
+      destroyed: 'Producto eliminado correctamente'
+  categories:
+    category:
+      edit: 'Editar'
+      delete: 'Borrar'
+    index:
+      title: 'Categorías'
+      new: 'Añadir categoría'
+    edit:
+      title: 'Editar categoría'
+    create:
+      created: 'Categoría creada correctamente'
+    update:
+      updated: 'Categoría actualizada correctamente'
+    destroy:
+      destroyed: 'Categoría eliminada correctamente'
+    new:
+      title: 'Añadir categoría'

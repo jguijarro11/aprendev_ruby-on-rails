@@ -1,0 +1,35 @@
+en:
+  activerecord:
+    models:
+      product: Product
+    attributes:
+      product:
+        title: 'Title'
+        description: 'Description'
+        price: 'Price'
+        photo: 'Photo'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: 'cannot be blank'
+            description:
+              blank: 'cannot be blank'
+            price:
+              blank: 'cannot be blank'
+  common:
+    confirm: 'Are you sure?'
+  products:
+    edit:
+      title: 'Edit product'
+    new:
+      title: 'Add product'
+    index:
+      title: 'Products'
+    create:
+      created: 'Product created properly'
+    update:
+      updated: 'Product updated properly'
+    destroy:
+      destroyed: 'Product destroyed properly'
