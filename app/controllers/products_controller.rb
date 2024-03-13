@@ -1,16 +1,7 @@
 class ProductsController < ApplicationController
     def index
         @categories = Category.order(name: :asc)
-        @products = Product.with_attached_photo.order(created_at: :desc)
-        if params[:category_id]
-            @products = @products.where(category_id: params[:category_id])
-        end
-        if params[:min_price].present?
-            @products = @products.where("price >= ?", params[:min_price])
-        end
-        if params[:max_price].present?
-            @products = @products.where("price <= ?", params[:max_price])
-        end
+        @pagy, @products = pagy_countless(FindProducts.new.call(params), items: 12)
     end
 
     def show

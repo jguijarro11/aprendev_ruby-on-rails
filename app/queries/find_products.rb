@@ -1,7 +1,7 @@
 class FindProducts
     attr_reader :products
 
-    def initialize(product = initial_scope)
+    def initialize(products = initial_scope)
         @products = products
     end
 
