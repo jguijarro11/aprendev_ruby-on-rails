@@ -1,5 +1,6 @@
 es:
   app_name: 'Vendelo'
+  meta_title: 'Compra y vende cosas'
   activerecord:
     models:
       product: Producto
@@ -21,6 +22,7 @@ es:
               blank: 'no puede estar vacío'
   common:
     confirm: '¿Estás seguro?'
+    not_logged_in: 'Tienes que iniciar sesión o crear una cuenta'
   shared:
     header:
       add: 'Añadir producto'
@@ -65,3 +67,11 @@ es:
       destroyed: 'Categoría eliminada correctamente'
     new:
       title: 'Añadir categoría'
+  authentication:
+    users:
+      create:
+        created: 'Usuario creado correctamente'
+    sessions:
+      create:
+        created: '¡Bienvenido!'
+        failed: 'Inicio de sesión inválido'

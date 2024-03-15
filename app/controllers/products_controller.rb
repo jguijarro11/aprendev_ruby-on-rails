@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
+    skip_before_action :protect_pages, only: [:index, :show]
+
     def index
         @categories = Category.order(name: :asc)
-        @pagy, @products = pagy_countless(FindProducts.new.call(params), items: 12)
+        @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index), items: 12)
     end
 
     def show
@@ -45,6 +47,10 @@ class ProductsController < ApplicationController
 
     def product_params
         params.require(:product).permit(:title, :description, :price, :category_id, :photo)
+    end
+
+    def product_params_index
+        params.permit(:category_id, :min_price, :max_price, :query_text, :order_by)
     end
 
     def product
